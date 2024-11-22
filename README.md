@@ -23,7 +23,7 @@ print(bubble_sort([64, 34, 25, 12, 22, 11, 90]))  # Esperado: [11, 12, 22, 25, 3
 print(bubble_sort([1, 2, 3, 4, 5]))               # Esperado: [1, 2, 3, 4, 5] (arreglo ya ordenado)
 
 
-** Referncias
+``` Referncias
 Bubble Sort en Python. (s. f.). El Libro de Python. https://ellibrodepython.com/bubble-sort
 GeeksforGeeks. (2023b, agosto 28). Python Program for Selection Sort. GeeksforGeeks. https://www.geeksforgeeks.org/python-program-for-selection-sort/
 GeeksforGeeks. (2021, 17 junio). max() and min() in Python. GeeksforGeeks. https://www.geeksforgeeks.org/max-min-python/
