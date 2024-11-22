@@ -16,43 +16,43 @@ Este repositorio contiene tres scripts con implementaciones de algoritmos de ord
 - Recorre el arreglo repetidamente, comparando elementos adyacentes y los intercambia si están en el orden incorrecto.
 - Si en una pasada no se realiza ningún intercambio, el algoritmo termina anticipadamente, ya que el arreglo está ordenado.
 
+**Ejemplo de uso**:
+
 ```python
-# BubbleSort.py
-# Este script implementa el algoritmo de ordenamiento Bubble Sort.
-# La función 'bubble_sort' recibe un arreglo de enteros y lo ordena en orden ascendente.
-
-def bubble_sort(arr):
-    """
-    Ordena un arreglo de enteros utilizando el algoritmo de Bubble Sort.
-
-    Parámetros:
-    arr (list): Un arreglo de enteros.
-
-    Retorna:
-    list: El arreglo ordenado en orden ascendente.
-    """
-    n = len(arr)
-    # Recorremos el arreglo en pasadas sucesivas
-    for i in range(n):
-        swapped = False  # Variable para verificar si hubo intercambios en la pasada
-        # Recorremos el arreglo desde el principio hasta la posición n - i - 1
-        for j in range(0, n - i - 1):
-            if arr[j] > arr[j + 1]:  # Si el elemento actual es mayor que el siguiente, se intercambian
-                arr[j], arr[j + 1] = arr[j + 1], arr[j]
-                swapped = True
-        # Si no hubo intercambios, el arreglo ya está ordenado
-        if not swapped:
-            break
-    return arr
-
-# Pruebas unitarias
-if __name__ == "__main__":
-    # Casos de prueba para verificar la funcionalidad
-    print(bubble_sort([64, 34, 25, 12, 22, 11, 90]))  # Esperado: [11, 12, 22, 25, 34, 64, 90]
-    print(bubble_sort([1, 2, 3, 4, 5]))               # Esperado: [1, 2, 3, 4, 5] (arreglo ya ordenado)
-    print(bubble_sort([5, 4, 3, 2, 1]))               # Esperado: [1, 2, 3, 4, 5] (arreglo en orden inverso)
-    print(bubble_sort([1]))                           # Esperado: [1] (arreglo con un solo elemento)
+print(bubble_sort([64, 34, 25, 12, 22, 11, 90]))  # Esperado: [11, 12, 22, 25, 34, 64, 90]
+print(bubble_sort([1, 2, 3, 4, 5]))               # Esperado: [1, 2, 3, 4, 5] (arreglo ya ordenado)
 ```
+
+
+### 2. MaxMinFinder.py
+
+**Descripción**: Este script contiene la implementación de la búsqueda del valor máximo y mínimo en un arreglo. La función `find_max_min` toma un arreglo de enteros como entrada y retorna los valores máximo y mínimo.
+
+**Funcionamiento**:
+- Inicializa los valores máximo y mínimo con el primer elemento del arreglo y recorre el arreglo actualizando los valores cuando encuentra un número mayor o menor.
+
+**Ejemplo de uso**:
+
+```python
+print(find_max_min([3, 1, 9, 7, 5, 9]))  # Esperado: (9, 1)
+print(find_max_min([1]))                # Esperado: (1, 1)
+```
+
+### 3. SelectionSort.py
+
+**Descripción**: Este script implementa el algoritmo de ordenamiento Selection Sort. La función `selection_sor` recibe un arreglo de enteros y lo ordena en orden ascendente.
+
+**Funcionamiento**:
+- En cada iteración, selecciona el elemento más pequeño del subarreglo no ordenado y lo intercambia con el primer elemento no ordenado.
+- Este proceso se repite hasta que el arreglo esté completamente ordenado.
+
+**Ejemplo de uso**:
+
+```python
+print(selection_sort([64, 34, 25, 12, 22, 11, 90]))  # Esperado: [11, 12, 22, 25, 34, 64, 90]
+print(selection_sort([1, 2, 3, 4, 5]))               # Esperado: [1, 2, 3, 4, 5] (arreglo ya ordenado)
+```
+
 
 **Referncias
 Bubble Sort en Python. (s. f.). El Libro de Python. https://ellibrodepython.com/bubble-sort
